@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #e6f2ff;
+    padding: 30px;
+    color: #2c3e50;
+}
+
+.container {
+    width: 600px;
+    margin: auto;
+}
+
+.profile-box, .form-box {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    border-bottom: 2px solid #cce0f5;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    margin: 8px 0;
+    color: #2c3e50;
+}
+
+label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #b0cbe6;
+    font-size: 14px;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #66b2ff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(102, 178, 255, 0.3);
+}
+
+textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+.radio-group {
+    margin: 8px 0 16px;
+    padding: 8px 12px;
+    background-color: #f0f8ff;
+    border-radius: 8px;
+}
+
+.radio-group label {
+    font-weight: normal;
+    margin-right: 20px;
+}
+
+.submit-button {
+    display: block;
+    margin: 30px auto 0;
+    padding: 10px 20px;
+    background-color: #66b2ff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #559de6;
+    transition: background-color 0.3s;
+}

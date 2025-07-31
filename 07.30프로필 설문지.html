@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>프로필 & 설문지</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- 프로필 -->
+        <div class="profile-box">
+            <h2>프로필</h2>
+            <p><strong>이름:</strong> 이건희</p>
+            <p><strong>나이:</strong> 27세 (만 26세)</p>
+            <p><strong>취미:</strong> 요리, 캠핑</p>
+            <p><strong>MBTI:</strong> ISFP (ESFP)</p>
+            <p><strong>좋아하는 것:</strong> 캠핑, 여행, 행복한 추억 만들기, 고기</p>
+            <p><strong>반려동물:</strong> 강아지 (치와와)</p>
+            <p><strong>사진:</strong></p>
+            <img src="dog.jpg" alt="강아지 사진" style="width:100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        </div>
+
+        <!-- 설문지 -->
+        <div class="form-box">
+            <h2>설문지</h2>
+            <form>
+                <!-- 감성 질문 -->
+                <label for="wish">1. 지금 이 순간 가장 바라는 것은?</label>
+                <input type="text" id="wish" name="wish">
+
+                <label for="memory">2. 지금 가장 먹고 싶은 음식은?</label>
+                <textarea id="memory" name="memory"></textarea>
+
+                <label for="place">3. 인생에서 가장 소중한 장소는?</label>
+                <input type="text" id="place" name="place">
+
+                <label for="happy">4. 최근 나를 행복하게 만든 일은?</label>
+                <textarea id="happy" name="happy"></textarea>
+
+                <label for="secret">5. 나만 알고 싶은 장소/노래/음식</label>
+                <input type="text" id="secret" name="secret">
+
+                <!-- 밸런스 게임 -->
+                <label>6. 햇살 가득한 바다 🏖 vs 조용한 숲속 캠핑장 🌲</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="q1" value="beach"> 바다</label>
+                    <label><input type="radio" name="q1" value="forest"> 숲속 캠핑장</label>
+                </div>
+
+                <label>7. 평생 택시 무료 vs 평생 비행기 무료 </label>
+                <div class="radio-group">
+                    <label><input type="radio" name="q2" value="taxi"> 택시</label>
+                    <label><input type="radio" name="q2" value="plane"> 비행기</label>
+                </div>
+
+                <label>8. 돼지고기 vs 소고기</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="q3" value="pork"> 돼지고기</label>
+                    <label><input type="radio" name="q3" value="beef"> 소고기</label>
+                </div>
+
+                <label>9. 즉흥 여행 vs 계획 여행</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="q4" value="spontaneous"> 즉흥 여행</label>
+                    <label><input type="radio" name="q4" value="planned"> 계획 여행</label>
+                </div>
+
+                <label>10. 아이스크림 vs 음료수</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="q5" value="icecream"> 아이스크림</label>
+                    <label><input type="radio" name="q5" value="drink"> 음료수</label>
+                </div>
+
+                <button class="submit-button" type="submit">제출하기</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
