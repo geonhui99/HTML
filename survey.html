@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>회원가입 양식</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+
+    table {
+      margin: 0 auto;
+      border-collapse: collapse;
+    }
+
+    td {
+      padding: 10px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 200px;
+    }
+
+    h3 {
+      color: #333;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="join.html" method="GET">
+    <table>
+      <tr>
+        <td>아이디</td>
+        <td><input type="text" name="id" required /></td>
+      </tr>
+      <tr>
+        <td>비밀번호</td>
+        <td><input type="password" name="pw" required /></td>
+      </tr>
+      <tr>
+        <td>비밀번호 확인</td>
+        <td><input type="password" name="pw2" required /></td>
+      </tr>
+      <tr>
+        <td>이름</td>
+        <td><input type="text" name="name" required /></td>
+      </tr>
+      <tr>
+        <td>전화번호</td>
+        <td><input type="text" name="phone" placeholder="휴대전화 번호" required /></td>
+      </tr>
+      <tr>
+        <td>원하는 직무</td>
+        <td>
+          <select name="position" required>
+            <option>미정</option>
+            <option>프론트엔드</option>
+            <option>백엔드</option>
+            <option>풀스택</option>
+            <option>아무거나</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>성별</td>
+        <td>
+          <input type="radio" name="gender" value="남자" checked />남자
+          <input type="radio" name="gender" value="여자" />여자
+        </td>
+      </tr>
+      <tr>
+        <td>이메일</td>
+        <td><input type="email" name="email" /></td>
+      </tr>
+      <tr>
+        <td>자기소개</td>
+        <td><textarea name="intro" cols="30" rows="3"></textarea></td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center;">
+          <button type="submit">가입</button>
+          <button type="reset">리셋</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+
+    const userId = params.get("id");
+    const userName = params.get("name");
+    const userPhone = params.get("phone");
+    const userPosition = params.get("position");
+
+    if (userId && userName && userPhone && userPosition) {
+      const resultHTML = `
+        <hr />
+        <h3>${userId}님, 환영합니다!</h3>
+        <p>회원 가입 시 입력하신 내용은 다음과 같습니다.</p>
+        <ul>
+          <li><strong>아이디:</strong> ${userId}</li>
+          <li><strong>이름:</strong> ${userName}</li>
+          <li><strong>전화번호:</strong> ${userPhone}</li>
+          <li><strong>원하는 직무:</strong> ${userPosition}</li>
+        </ul>
+      `;
+      document.body.insertAdjacentHTML("beforeend", resultHTML);
+    }
+  </script>
+</body>
+
+</html>
